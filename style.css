@@ -1,0 +1,144 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *::after, *::before {
+    box-sizing: inherit;
+}
+
+
+/* I want to declare variable in CSS */
+:root {
+    --masthai: #45485e;
+    --safed: white;
+}
+
+
+body {
+    /* I want to use the variable that I have declared */
+    background-color: var(--masthai);
+    color: var(--safed);
+    margin: 0;
+    padding: 0;
+}
+
+
+/* For measuring this thing are used */
+/* px -> always fixed 
+   rem -> relative to html font
+   em -> relative to parent element font
+   Both rem and em are relative scalable
+/
+
+
+
+/* 
+
+10 px margin below something 
+and 10 px margin above something
+is not 20px it is 10 px only. They do not addUp. 
+
+*/
+
+
+
+#intro {
+    line-height: 1.5;
+    padding: 5rem 1rem 4rem 1rem;      
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+#intro p {
+    font-size: 1.5rem;
+    /* give line height always in terms of integer number not in the px format and all so that line do not overlap */
+}
+
+p span {
+    display: block;
+    font-size: 2.5rem;
+}
+
+h4 {
+    font-size: 2.5rem;
+}
+
+
+
+
+
+
+#hireme {
+    max-width: 20rem;
+    text-align: center;
+    /* top-bottom will be 10% while whatever is the width that is remaining that will be equally distributed between right and left */
+    margin: 3% auto;
+}
+
+#hireme a {
+    color: white;
+    text-decoration: none;
+}
+
+#hireme a:hover {
+    color: black;
+}
+
+
+
+
+
+
+
+nav {
+    font-size: 80%;
+    background-color: #033649;
+}
+
+nav ul {
+    
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+
+    flex-flow: row;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li {
+    padding: 1rem;
+}
+
+nav ul a {
+    color: white;
+    text-decoration: none;
+}
+
+nav li:first-child {
+    flex-basis: 100%;
+}
+
+nav a:hover {
+    font-size: larger;
+}
+
+.separationLine {
+    height: 2px;
+    background:  white;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: rgb(30, 31, 32);
+}
+
+
+@media(width <= 400px) {
+    nav ul {
+        flex-wrap: wrap;
+    }
+}
